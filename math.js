@@ -12,7 +12,7 @@ module.exports = {
     SubFN:sub
 };
 
-//Another way to export the functions/modules
+//Another way to Export the functions/modules
 // exports.add1 = (a,b) => a + b;
 
 // exports.sub2 = (a,b) => a - b;
