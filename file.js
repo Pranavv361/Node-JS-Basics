@@ -1,9 +1,10 @@
 const fs = require("fs");
+const os = require("os");
 
-// // Sync.. call
+// // Sync.. call  -- Blocking operation
 // fs.writeFileSync("./test.txt", "Hey There");
 
-// //Async
+// //Async  -- Non Blocking operation
 // fs.writeFile("./test.txt", "Hey There Async",(err) => {})
 
 // const result = fs.readFileSync("./contacts.txt","utf-8");
@@ -19,6 +20,15 @@ const fs = require("fs");
 
 // fs.appendFileSync("./test.txt", new Date().getDate().toLocaleString());
 
-fs.appendFileSync("./test.txt",'${Date.now()} Hey There\n');
+// fs.appendFileSync("./test.txt",'${Date.now()} Hey There\n');
 
-console.log(Date.now())
+// console.log(Date.now())
+
+// fs.cpSync('./test.txt','./copysync.txt')
+
+// console.log(fs.statSync('./test.txt'));
+
+// fs.mkdirSync('./mydocs/')
+
+
+console.log(os.cpus().length);
