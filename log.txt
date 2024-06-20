@@ -17,3 +17,20 @@
 1718776693986: /about?id=Pranav New Request Received
 1718777064618: /about?id=Pranav New Request Received
 1718777073352: /about?id=Don New Request Received
+1718813076437: GET /about New Request Received
+1718813084963: GET / New Request Received
+1718813210352: GET / New Request Received
+1718813213619: GET / New Request Received
+1718813506810: GET /signup New Request Received
+
+// Version
+4.18.2
+
+1st part -> 4
+Major Release - Major/ Breaking Update
+
+2nd part -> 18
+Recommended Bug Fixes (Critical Security Fixes or some new features)
+
+3rd part -> 2
+Minor fixes (Optional updates/Typos)
