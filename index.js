@@ -29,6 +29,8 @@ app.get("/users", (req, res) => {
 
 //Rest API endpoint for getting all users in JSON format
 app.get("/api/users", (req, res) => {
+  res.setHeader("X-my-header", "User Created Header"); // Custom Header in response header
+  console.log(req.headers);
   return res.json(users);
 });
 
