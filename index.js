@@ -29,7 +29,8 @@ app.get("/users", (req, res) => {
 
 //Rest API endpoint for getting all users in JSON format
 app.get("/api/users", (req, res) => {
-  res.setHeader("X-my-header", "User Created Header"); // Custom Header in response header
+  res.setHeader("X-MyName", "User Created Header"); // Custom Header in response header
+  //always add X- to the custom header.
   console.log(req.headers);
   return res.json(users);
 });
@@ -56,6 +57,7 @@ app
   .get((req, res) => {
     const id = Number(req.params.id);
     const user = users.find((user) => user.id === id);
+    if (!user) return res.status(404).json({ error: "User not found" });
     return res.json(user);
   })
   .patch((req, res) => {
@@ -96,9 +98,18 @@ app
 
 app.post("/api/users", (req, res) => {
   const body = req.body;
+  if (
+    !body.first_name ||
+    !body.last_name ||
+    !body.gender ||
+    !body.email ||
+    !body.job_title
+  ) {
+    return res.status(400).json({ error: "All fields are required" });
+  }
   users.push({ ...body, id: users.length + 1 });
   fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
-    return res.json({ status: " Success ", id: users.length });
+    return res.status(201).json({ status: " Success ", id: users.length });
   });
 });
 
