@@ -1,0 +1,4 @@
+Using Mongoose to connect MongoDB to NodeJS application
+Schema - Define the structure
+    Schema - Model
+    Using Model we do CRUD operation
