@@ -8,4 +8,4 @@ async function connectMongoDB(url) {
     .catch((err) => console.log("MongoDB connection failed:", err));
 }
 
-module.exports = connectMongoDB;
+module.exports = { connectMongoDB };
